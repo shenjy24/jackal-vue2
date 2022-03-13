@@ -2,7 +2,7 @@
   <div>
     <table class="t">
       <tr v-for="u in users">
-        <td>{{ u.name }}</td>
+        <td @click="showUser(u.name)">{{u.name}}</td>
       </tr>
     </table>
   </div>
@@ -10,10 +10,15 @@
 
 <script>
 export default {
-  name: 'Axios',
+  name: 'Router1',
   data() {
     return {
       users: []
+    }
+  },
+  methods: {
+    showUser(userName) {
+      this.$router.push({name: 'Router2', query: {name: userName}})
     }
   },
   mounted() {

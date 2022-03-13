@@ -1,28 +1,27 @@
 <template>
   <div>
-    <table class="t">
-      <tr v-for="u in users">
-        <td>{{ u.name }}</td>
-      </tr>
-    </table>
+    <p>用户：{{user.name}}</p>
+    <p>年龄：{{user.age}}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Axios',
+  name: 'Router2',
   data() {
     return {
-      users: []
+      user: {}
     }
   },
   mounted() {
     this.$axios({
       method: 'post',
-      url: '/user/listUser',
-      data: {}
+      url: '/user/getUserByName',
+      data: {
+        name: this.$route.query.name
+      }
     }).then(response => {
-      this.users = response
+      this.user = response
       console.log(response, 'success')
     }).catch(error => {
       console.log(error, 'error')
