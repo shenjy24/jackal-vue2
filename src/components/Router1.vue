@@ -2,7 +2,12 @@
   <div>
     <table class="t">
       <tr v-for="u in users">
+        <!-- 跳转第一种方法 -->
         <td @click="showUser(u.name)">{{u.name}}</td>
+        <!-- 跳转第二种方法 -->
+        <td>
+          <router-link :to="{name: 'Router2', query: {name: u.name}}">{{u.name}}</router-link>
+        </td>
       </tr>
     </table>
   </div>
