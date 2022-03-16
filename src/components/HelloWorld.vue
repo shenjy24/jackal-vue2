@@ -1,7 +1,7 @@
 <template>
   <div class="hi">
     {{ msg }}<br>
-    <input type="button" @click="updateMsg('Nice')" value="click"/>
+    <input type="button" @click="updateMsg('Very Nice')" value="click"/>
   </div>
 </template>
 
