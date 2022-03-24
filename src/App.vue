@@ -6,8 +6,20 @@
 </template>
 
 <script>
+import {SessionKey} from "./components/common/constant";
+
 export default {
-  name: 'App'
+  name: 'App',
+
+  created() {
+    if (sessionStorage.getItem(SessionKey.COUNTER)) {
+      this.$store.replaceState(Object.assign({}, this.$store.state, JSON.parse(sessionStorage.getItem(SessionKey.COUNTER))))
+    }
+
+    window.addEventListener("beforeunload", () => {
+      sessionStorage.setItem(SessionKey.COUNTER, JSON.stringify(this.$store.state))
+    })
+  }
 }
 </script>
 

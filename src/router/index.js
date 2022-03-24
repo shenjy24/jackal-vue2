@@ -6,6 +6,9 @@ import Router1 from '@/components/Router1'
 import Router2 from '@/components/Router2'
 import ComputedProperty from '@/components/ComputedProperty'
 import Condition from '@/components/Condition'
+import ComponentParent from "@/components/ComponentParent";
+import ComponentSon1 from "@/components/ComponentSon1";
+import VuexCounter from "../components/VuexCounter";
 
 Vue.use(Router)
 
@@ -40,6 +43,21 @@ export default new Router({
       path: '/condition',
       name: 'Condition',
       component: Condition
+    },
+    {
+      path: '/parent',
+      name: 'ComponentParent',
+      component: ComponentParent
+    },
+    {
+      path: '/son1',
+      name: 'ComponentSon1',
+      component: ComponentSon1
+    },
+    {
+      path: '/counter',
+      name: 'VuexCounter',
+      component: VuexCounter
     }
   ]
 })

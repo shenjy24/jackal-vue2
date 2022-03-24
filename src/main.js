@@ -5,6 +5,7 @@ import App from '@/App'
 import router from '@/router'
 import axios from 'axios';
 import Qs from 'qs';
+import {store} from "./store";
 
 Vue.prototype.$axios = axios
 axios.defaults.baseURL = '/api'
@@ -36,5 +37,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store
 })
