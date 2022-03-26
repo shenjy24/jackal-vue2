@@ -1,6 +1,6 @@
 <template>
   <div class="hi">
-    <h3>{{ title }}</h3>
+    <h3>{{ myTitle }}</h3>
   </div>
 </template>
 
@@ -13,7 +13,14 @@ export default {
       count: 0
     }
   },
-  methods: {}
+  methods: {
+
+  },
+  computed: {
+    myTitle() {
+      return this.title + ":" + this.count
+    }
+  }
 }
 </script>
 

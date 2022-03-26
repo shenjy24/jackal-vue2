@@ -2,9 +2,8 @@
   <div>
     <component-son1/>
     <component-son2 title="My journey with Vue"></component-son2>
-    <div :style="{ fontSize: postFontSize + 'em' }">
-        <component-son3 v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title" v-on:enlarge-text="postFontSize += 0.1"></component-son3>
-    </div>
+    <component-son3 :style="{ fontSize: postFontSize + 'em' }" v-for="post in posts" :key="post.id" :title="post.title"
+                    @enlarge-text="updateFontSize"></component-son3>
   </div>
 </template>
 
@@ -30,6 +29,10 @@ export default {
   methods: {
     updateMsg(msg) {
       this.msg = msg
+    },
+    updateFontSize() {
+      this.postFontSize += 0.1
+      console.log(this.postFontSize)
     }
   }
 }

@@ -22,7 +22,7 @@ export default {
     getCount() {
       return this.$store.state.counter.count
     }
-  }
+  },
 }
 </script>
 

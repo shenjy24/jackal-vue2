@@ -19,6 +19,21 @@ export default {
     window.addEventListener("beforeunload", () => {
       sessionStorage.setItem(SessionKey.COUNTER, JSON.stringify(this.$store.state))
     })
+
+    window.addEventListener('keydown', event => {
+      console.log("key:" + event.key)
+      console.log("code:" + event.code)
+      if (event.key === 'F5' || event.key === 'Control' || event.key === 'w') {
+        event.preventDefault()
+      }
+    })
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('keydown', event => {
+      console.log(event.value)
+      event.preventDefault()
+    })
   }
 }
 </script>

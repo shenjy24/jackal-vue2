@@ -1,7 +1,7 @@
 <template>
   <div class="hi">
     <h3>{{ title }}</h3>
-    <button v-on:click="$emit('enlarge-text')">
+    <button @click="enlarge">
       Enlarge text
     </button>
   </div>
@@ -16,7 +16,11 @@ export default {
       count: 0
     }
   },
-  methods: {}
+  methods: {
+    enlarge() {
+      this.$emit('enlarge-text')
+    }
+  }
 }
 </script>
 
