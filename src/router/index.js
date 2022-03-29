@@ -9,7 +9,8 @@ import Condition from '@/components/Condition'
 import ComponentParent from "@/components/ComponentParent";
 import ComponentSon1 from "@/components/ComponentSon1";
 import VuexCounter from "../components/VuexCounter";
-import WebSite from "../components/slot-component/WebSite";
+import WebSite from "../components/slot/WebSite";
+import MixinComponent from "../components/mixin/MixinComponent";
 
 Vue.use(Router)
 
@@ -64,6 +65,11 @@ export default new Router({
       path: '/slot',
       name: 'WebSite',
       component: WebSite
+    },
+    {
+      path: '/mixin',
+      name: 'MixinComponent',
+      component: MixinComponent
     }
   ]
 })
