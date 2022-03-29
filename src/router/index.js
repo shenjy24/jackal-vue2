@@ -9,6 +9,7 @@ import Condition from '@/components/Condition'
 import ComponentParent from "@/components/ComponentParent";
 import ComponentSon1 from "@/components/ComponentSon1";
 import VuexCounter from "../components/VuexCounter";
+import WebSite from "../components/slot-component/WebSite";
 
 Vue.use(Router)
 
@@ -58,6 +59,11 @@ export default new Router({
       path: '/counter',
       name: 'VuexCounter',
       component: VuexCounter
+    },
+    {
+      path: '/slot',
+      name: 'WebSite',
+      component: WebSite
     }
   ]
 })
