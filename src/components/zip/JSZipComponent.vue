@@ -25,13 +25,12 @@ export default {
     handleBefore(file) {
       let new_zip = new JSZip();
       new_zip.loadAsync(file)
-        .then(function (file) {
-          new_zip.file("logo.png").async("blob")
+        .then(function (zip) {
+          //获取压缩包中的logo.png图片
+          zip.file("logo.png").async("blob")
             .then(content => {
-              let blob = new Blob([content], {
-                type: "image/jpeg"
-              });
-              saveAs(blob, `logo1.jpg`);
+              //保存至浏览器端
+              saveAs(content, `logo1.jpg`);
             })
         })
     }

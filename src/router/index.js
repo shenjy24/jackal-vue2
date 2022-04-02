@@ -12,6 +12,7 @@ import VuexCounter from "../components/VuexCounter";
 import WebSite from "../components/slot/WebSite";
 import MixinComponent from "../components/mixin/MixinComponent";
 import JSZipComponent from "../components/zip/JSZipComponent";
+import JSZipDemo from "../components/zip/JSZipDemo";
 
 Vue.use(Router)
 
@@ -76,6 +77,11 @@ export default new Router({
       path: '/zip',
       name: 'JSZipComponent',
       component: JSZipComponent
+    },
+    {
+      path: '/zip2',
+      name: 'JSZipDemo',
+      component: JSZipDemo
     }
   ]
 })
