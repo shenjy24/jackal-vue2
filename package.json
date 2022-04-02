@@ -10,6 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "ajv": "^8.11.0",
+    "element-ui": "^2.15.6",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.8.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.6.2"

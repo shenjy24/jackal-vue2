@@ -5,12 +5,15 @@ import App from '@/App'
 import router from '@/router'
 import axios from 'axios';
 import Qs from 'qs';
+import ElementUI from 'element-ui';
 import {store} from "./store";
 
 Vue.prototype.$axios = axios
 axios.defaults.baseURL = '/api'
 
 Vue.config.productionTip = false
+
+Vue.use(ElementUI)
 
 // 添加一个请求拦截器
 axios.interceptors.request.use(config => {
