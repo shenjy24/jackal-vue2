@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import {SessionKey} from "./components/common/constant";
+import {SessionKey} from "./common/constant";
 
 export default {
   name: 'App',

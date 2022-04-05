@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     enlarge() {
-      this.$emit('enlarge-text')
+      this.$emit('enlarge-text', 0.1)
     }
   }
 }

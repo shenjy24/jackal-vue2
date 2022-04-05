@@ -9,6 +9,10 @@ import Condition from '@/components/Condition'
 import ComponentParent from "@/components/ComponentParent";
 import ComponentSon1 from "@/components/ComponentSon1";
 import VuexCounter from "../components/VuexCounter";
+import WebSite from "../components/slot/WebSite";
+import MixinComponent from "../components/mixin/MixinComponent";
+import JSZipComponent from "../components/zip/JSZipComponent";
+import JSZipDemo from "../components/zip/JSZipDemo";
 
 Vue.use(Router)
 
@@ -58,6 +62,26 @@ export default new Router({
       path: '/counter',
       name: 'VuexCounter',
       component: VuexCounter
+    },
+    {
+      path: '/slot',
+      name: 'WebSite',
+      component: WebSite
+    },
+    {
+      path: '/mixin',
+      name: 'MixinComponent',
+      component: MixinComponent
+    },
+    {
+      path: '/zip',
+      name: 'JSZipComponent',
+      component: JSZipComponent
+    },
+    {
+      path: '/zip2',
+      name: 'JSZipDemo',
+      component: JSZipDemo
     }
   ]
 })

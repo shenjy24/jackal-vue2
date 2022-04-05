@@ -1,7 +1,8 @@
 <template>
   <div class="hi">
     {{ msg }}<br>
-    <input type="button" @click="updateMsg('Very Nice')" value="click"/>
+    <input type="button" @click="updateMsg('Very Nice')" value="click"/><br>
+    <input v-focus/>
   </div>
 </template>
 
@@ -16,6 +17,13 @@ export default {
   methods: {
     updateMsg (msg) {
       this.msg = msg
+    }
+  },
+  directives: {
+    focus: {
+      inserted(el) {
+        el.focus()
+      }
     }
   }
 }
