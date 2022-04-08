@@ -13,6 +13,7 @@ import WebSite from "../components/slot/WebSite";
 import MixinComponent from "../components/mixin/MixinComponent";
 import JSZipComponent from "../components/zip/JSZipComponent";
 import JSZipDemo from "../components/zip/JSZipDemo";
+import Flex from "../components/flex/Flex";
 
 Vue.use(Router)
 
@@ -82,6 +83,11 @@ export default new Router({
       path: '/zip2',
       name: 'JSZipDemo',
       component: JSZipDemo
+    },
+    {
+      path: '/flex',
+      name: 'Flex',
+      component: Flex
     }
   ]
 })
