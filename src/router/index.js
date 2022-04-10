@@ -14,6 +14,7 @@ import MixinComponent from "../components/mixin/MixinComponent";
 import JSZipComponent from "../components/zip/JSZipComponent";
 import JSZipDemo from "../components/zip/JSZipDemo";
 import Flex from "../components/flex/Flex";
+import Grid from "../components/grid/Grid";
 
 Vue.use(Router)
 
@@ -88,6 +89,11 @@ export default new Router({
       path: '/flex',
       name: 'Flex',
       component: Flex
+    },
+    {
+      path: '/grid',
+      name: 'Grid',
+      component: Grid
     }
   ]
 })
