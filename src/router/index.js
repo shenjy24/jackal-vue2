@@ -14,7 +14,11 @@ import MixinComponent from "../components/mixin/MixinComponent";
 import JSZipComponent from "../components/zip/JSZipComponent";
 import JSZipDemo from "../components/zip/JSZipDemo";
 import Flex from "../components/flex/Flex";
+<<<<<<< HEAD
 import EventComponent from "@/components/event/EventComponent";
+=======
+import Grid from "../components/grid/Grid";
+>>>>>>> cb0b2d657a467d8c7a1979a8765ee5c5a04b315b
 
 Vue.use(Router)
 
@@ -91,9 +95,15 @@ export default new Router({
       component: Flex
     },
     {
+<<<<<<< HEAD
       path: '/event',
       name: 'EventComponent',
       component: EventComponent
+=======
+      path: '/grid',
+      name: 'Grid',
+      component: Grid
+>>>>>>> cb0b2d657a467d8c7a1979a8765ee5c5a04b315b
     }
   ]
 })
