@@ -8,7 +8,9 @@
 export default {
   name: 'CssComponent',
   data() {
-    return {}
+    return {
+      msg: "自定义属性"
+    }
   },
   methods: {
     updateMsg(msg) {
