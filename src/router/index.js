@@ -13,10 +13,11 @@ import WebSite from "../components/slot/WebSite";
 import MixinComponent from "../components/mixin/MixinComponent";
 import JSZipComponent from "../components/zip/JSZipComponent";
 import JSZipDemo from "../components/zip/JSZipDemo";
-import Flex from "../components/flex/Flex";
+import Flex from "../components/css/flex/Flex";
 import EventComponent from "@/components/event/EventComponent";
-import Grid from "../components/grid/Grid";
+import Grid from "../components/css/grid/Grid";
 import CssComponent from "@/components/css/CssComponent";
+import FlvComponent from "@/components/media/FlvComponent";
 
 Vue.use(Router)
 
@@ -106,6 +107,11 @@ export default new Router({
       path: '/css',
       name: 'CssComponent',
       component: CssComponent
+    },
+    {
+      path: '/video',
+      name: 'FlvComponent',
+      component: FlvComponent
     }
   ]
 })
