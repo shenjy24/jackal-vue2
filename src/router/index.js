@@ -8,7 +8,7 @@ import ComputedProperty from '@/components/ComputedProperty'
 import Condition from '@/components/Condition'
 import ComponentParent from "@/components/ComponentParent";
 import ComponentSon1 from "@/components/ComponentSon1";
-import VuexCounter from "../components/VuexCounter";
+import VuexCounter from "../components/storage/VuexCounter";
 import WebSite from "../components/slot/WebSite";
 import MixinComponent from "../components/mixin/MixinComponent";
 import JSZipComponent from "../components/zip/JSZipComponent";
@@ -18,6 +18,7 @@ import EventComponent from "@/components/event/EventComponent";
 import Grid from "../components/css/grid/Grid";
 import CssComponent from "@/components/css/CssComponent";
 import FlvComponent from "@/components/media/FlvComponent";
+import SessionCounter from "@/components/storage/SessionCounter";
 
 Vue.use(Router)
 
@@ -112,6 +113,11 @@ export default new Router({
       path: '/video',
       name: 'FlvComponent',
       component: FlvComponent
+    },
+    {
+      path: '/session',
+      name: 'SessionCounter',
+      component: SessionCounter
     }
   ]
 })
