@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Axios from '@/components/Axios'
-import Router1 from '@/components/Router1'
-import Router2 from '@/components/Router2'
-import ComputedProperty from '@/components/ComputedProperty'
-import Condition from '@/components/Condition'
-import ComponentParent from "@/components/ComponentParent";
-import ComponentSon1 from "@/components/ComponentSon1";
+import CustomDirective from '@/components/feature/directive/CustomDirective'
+import Axios from '@/components/request/Axios'
+import Router1 from '@/components/feature/router/Router1'
+import Router2 from '@/components/feature/router/Router2'
+import ComputedProperty from '@/components/feature/ComputedProperty'
+import Condition from '@/components/feature/directive/Condition'
+import ComponentParent from "@/components/feature/nested/ComponentParent";
+import ComponentSon1 from "@/components/feature/nested/ComponentSon1";
 import VuexCounter from "../components/storage/VuexCounter";
-import WebSite from "../components/slot/WebSite";
-import MixinComponent from "../components/mixin/MixinComponent";
+import WebSite from "../components/feature/slot/WebSite";
+import MixinComponent from "../components/feature/mixin/MixinComponent";
 import JSZipComponent from "../components/zip/JSZipComponent";
 import JSZipDemo from "../components/zip/JSZipDemo";
 import Flex from "../components/css/flex/Flex";
@@ -26,8 +26,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'CustomDirective',
+      component: CustomDirective
     },
     {
       path: '/axios',

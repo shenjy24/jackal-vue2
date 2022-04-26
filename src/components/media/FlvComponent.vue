@@ -19,13 +19,14 @@ export default {
   },
   methods: {
     playPause() {
-      this.flvPlayer.play()
+      if (this.flvPlayer._mediaElement.paused) {
+        this.flvPlayer.play()
+      } else {
+        this.flvPlayer.pause()
+      }
     }
   },
   mounted() {
-    if (!flvjs.isSupported()) {
-      return
-    }
     let videoElement = document.getElementById('videoElement')
     this.flvPlayer = flvjs.createPlayer({
       type: 'mp4',

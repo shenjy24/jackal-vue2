@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import {toggle} from "../../common/mixin/toggle";
+import {toggle} from "../../../common/mixin/toggle";
 
 export default {
   name: 'MixinComponent',
