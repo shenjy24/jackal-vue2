@@ -19,6 +19,9 @@ import Grid from "../components/css/grid/Grid";
 import CssComponent from "@/components/css/CssComponent";
 import FlvComponent from "@/components/media/FlvComponent";
 import SessionCounter from "@/components/storage/SessionCounter";
+import BoxSizing from "../components/css/box/BoxSizing";
+import ContourColumnTable from "../components/css/box/ContourColumnTable";
+import ContourColumnFlex from "../components/css/box/ContourColumnFlex";
 
 Vue.use(Router)
 
@@ -118,6 +121,21 @@ export default new Router({
       path: '/session',
       name: 'SessionCounter',
       component: SessionCounter
+    },
+    {
+      path: '/box-sizing',
+      name: 'BoxSizing',
+      component: BoxSizing
+    },
+    {
+      path: '/contour-column-table',
+      name: 'ContourColumnTable',
+      component: ContourColumnTable
+    },
+    {
+      path: '/contour-column-flex',
+      name: 'ContourColumnFlex',
+      component: ContourColumnFlex
     }
   ]
 })
