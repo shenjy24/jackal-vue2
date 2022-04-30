@@ -31,6 +31,7 @@ export default {
 </script>
 
 <style scoped>
+
 body {
   background-color: #eee;
   font-family: Helvetica, Arial, sans-serif;
@@ -49,7 +50,6 @@ header {
 }
 
 .main {
-  box-sizing: border-box;
   display: table-cell;
   width: 70%;
   background-color: #ad9a9a;
@@ -62,7 +62,6 @@ header {
 }
 
 .sidebar {
-  box-sizing: border-box;
   display: table-cell;
   width: 30%;
   /*margin-left: 1.5em; 外边距不再生效 */

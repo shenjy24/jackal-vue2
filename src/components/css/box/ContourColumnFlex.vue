@@ -14,9 +14,9 @@
         </p>
       </main>
       <aside class="sidebar">
-        <div class="widget"></div>
-        <div class="widget"></div>
-        <div class="gizmo"></div>
+        <a href="/twitter" class="button-link">follow us on Twitter</a>
+        <a href="/facebook" class="button-link">like us on Facebook</a>
+        <a href="/sponsors" class="sponsor-link">become a sponsor</a>
       </aside>
     </div>
   </div>
@@ -29,6 +29,7 @@ export default {
 </script>
 
 <style scoped>
+
 body {
   background-color: #eee;
   font-family: Helvetica, Arial, sans-serif;
@@ -42,21 +43,41 @@ header {
   color: #fff;
   background-color: #0072b0;
   border-radius: .5em;
+  padding: 1em 1.5em; /* 增加内边距可以避免外边距折叠 */
 }
 
 .main {
-  box-sizing: border-box;
   width: 70%;
   background-color: #ad9a9a;
   border-radius: 0.5em;
 }
 
 .sidebar {
-  box-sizing: border-box;
   width: 30%;
   margin-left: 1.5em;
   padding: 1.5em;
   background-color: #ad9a9a;
   border-radius: 0.5em;
+}
+
+.button-link {
+  display: block;
+  padding: 0.5em;
+  color: #fff;
+  background-color: #0090C9;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-link + .button-link { /* 只给紧跟在其他button-link后面的button-link加上顶部外边距 */
+  margin-top: 1.5em;
+}
+
+.sponsor-link {
+  display: block;
+  color: #0072b0;
+  font-weight: bold;
+  text-decoration: none;
 }
 </style>

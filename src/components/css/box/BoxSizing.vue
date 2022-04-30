@@ -26,6 +26,16 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: #eee;
   font-family: Helvetica, Arial, sans-serif;
@@ -38,7 +48,7 @@ header {
 }
 
 .main {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   float: left;
   width: 70%;
   background-color: #ad9a9a;
@@ -46,7 +56,7 @@ header {
 }
 
 .sidebar {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   float: left;
   width: calc(30% - 1.5em);
   margin-left: 1.5em;
