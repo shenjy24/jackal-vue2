@@ -117,7 +117,7 @@ header {
   clear: both;
 }
 
-.media :nth-child(odd) { /* 每个新行清除了上面一行的浮动 */
+.media:nth-child(odd) { /* 每个新行清除了上面一行的浮动 */
   clear: left;
 }
 

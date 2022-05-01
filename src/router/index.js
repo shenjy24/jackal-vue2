@@ -23,6 +23,7 @@ import BoxSizing from "../components/css/box/BoxSizing";
 import ContourColumnTable from "../components/css/box/ContourColumnTable";
 import ContourColumnFlex from "../components/css/box/ContourColumnFlex";
 import Float from "../components/css/float/Float";
+import Position from "../components/css/position/Position";
 
 Vue.use(Router)
 
@@ -142,6 +143,11 @@ export default new Router({
       path: '/float',
       name: 'Float',
       component: Float
+    },
+    {
+      path: '/position',
+      name: 'Position',
+      component: Position
     }
   ]
 })
