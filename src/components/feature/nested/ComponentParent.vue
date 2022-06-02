@@ -1,6 +1,7 @@
 <template>
   <div>
-    <component-son1/>
+    <button @click="toggle">toggle component-son1</button>
+    <component-son1 v-if="show"></component-son1>
     <component-son2 title="My journey with Vue"></component-son2>
     <component-son3 :style="{ fontSize: postFontSize + 'em' }" v-for="post in posts" :key="post.id" :title="post.title"
                     @enlarge-text="updateFontSize($event)"></component-son3>
@@ -23,13 +24,15 @@ export default {
         {id: 2, title: 'Blogging with Vue'},
         {id: 3, title: 'Why Vue is so fun'}
       ],
-      postFontSize: 1
+      postFontSize: 1,
+      show: false
     }
   },
   methods: {
-    updateMsg(msg) {
-      this.msg = msg
+    toggle() {
+      this.show = !this.show
     },
+
     updateFontSize(args) {
       this.postFontSize += args
     }

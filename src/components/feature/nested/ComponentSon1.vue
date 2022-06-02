@@ -12,7 +12,20 @@ export default {
       count: 0
     }
   },
-  methods: {}
+
+  created() {
+    console.log("ComponentSon1 created")
+  },
+
+  mounted() {
+    console.log("ComponentSon1 mounted")
+  },
+
+  methods: {
+    onClickButton() {
+      this.$emit('click-button')
+    }
+  }
 }
 </script>
 

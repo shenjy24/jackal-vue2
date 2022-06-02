@@ -4,6 +4,12 @@ export const toggle = {
       show: false
     }
   },
+  created() {
+    console.log("created")
+  },
+  mounted() {
+    console.log("mounted")
+  },
   methods: {
     toggleShow() {
       this.show = !this.show

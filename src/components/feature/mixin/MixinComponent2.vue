@@ -9,10 +9,10 @@
 import {toggle} from "../../../common/mixin/toggle";
 
 export default {
-  name: 'MixinComponent',
+  name: 'MixinComponent2',
   mixins: [toggle],
   mounted() {
-    console.log("1:mounted")
+    console.log("2:mounted")
   }
 }
 </script>

@@ -19,6 +19,8 @@ import Grid from "../components/css/grid/Grid";
 import CssComponent from "@/components/css/CssComponent";
 import FlvComponent from "@/components/media/FlvComponent";
 import SessionCounter from "@/components/storage/SessionCounter";
+import BoxSizing from "@/components/css/box/BoxSizing";
+import MixinComponent2 from "@/components/feature/mixin/MixinComponent2";
 
 Vue.use(Router)
 
@@ -80,6 +82,11 @@ export default new Router({
       component: MixinComponent
     },
     {
+      path: '/mixin2',
+      name: 'MixinComponent2',
+      component: MixinComponent2
+    },
+    {
       path: '/zip',
       name: 'JSZipComponent',
       component: JSZipComponent
@@ -118,6 +125,11 @@ export default new Router({
       path: '/session',
       name: 'SessionCounter',
       component: SessionCounter
+    },
+    {
+      path: '/box',
+      name: 'BoxSizing',
+      component: BoxSizing
     }
   ]
 })
