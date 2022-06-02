@@ -21,6 +21,10 @@ import FlvComponent from "@/components/media/FlvComponent";
 import SessionCounter from "@/components/storage/SessionCounter";
 import BoxSizing from "@/components/css/box/BoxSizing";
 import MixinComponent2 from "@/components/feature/mixin/MixinComponent2";
+import ContourColumnTable from "../components/css/box/ContourColumnTable";
+import ContourColumnFlex from "../components/css/box/ContourColumnFlex";
+import Float from "../components/css/float/Float";
+import Position from "../components/css/position/Position";
 
 Vue.use(Router)
 
@@ -127,9 +131,29 @@ export default new Router({
       component: SessionCounter
     },
     {
-      path: '/box',
+      path: '/box-sizing',
       name: 'BoxSizing',
       component: BoxSizing
+    },
+    {
+      path: '/contour-column-table',
+      name: 'ContourColumnTable',
+      component: ContourColumnTable
+    },
+    {
+      path: '/contour-column-flex',
+      name: 'ContourColumnFlex',
+      component: ContourColumnFlex
+    },
+    {
+      path: '/float',
+      name: 'Float',
+      component: Float
+    },
+    {
+      path: '/position',
+      name: 'Position',
+      component: Position
     }
   ]
 })

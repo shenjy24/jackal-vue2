@@ -22,11 +22,21 @@
 
 <script>
 export default {
-  name: "Box"
+  name: "BoxSizing"
 }
 </script>
 
 <style scoped>
+.container {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: #eee;
   font-family: Helvetica, Arial, sans-serif;
@@ -43,20 +53,20 @@ main {
 }
 
 .main {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   float: left;
   width: 70%;
-  background-color: #afa3a3;
+  background-color: #ad9a9a;
   border-radius: .5em;
 }
 
 .sidebar {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   float: left;
   width: calc(30% - 1.5em);
-  margin-left: 1.5em;     /* 用于实现间隔 */
+  margin-left: 1.5em;
   padding: 1.5em;
-  background-color: #afa3a3;
+  background-color: #ad9a9a;
   border-radius: .5em;
 }
 </style>
